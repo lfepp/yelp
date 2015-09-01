@@ -1,0 +1,196 @@
+[
+    {
+        "idSent": "%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%BA-%E6%9D%B1%E4%BA%AC-%E6%B8%AF%E5%8C%BA",
+        "id": "アンダーズ東京-港区",
+        "name": "アンダーズ東京",
+        "address": "虎ノ門1-23-4",
+        "city": "港区",
+        "state": "13",
+        "country": "JP",
+        "numReviews": 10
+    },
+    {
+        "idSent": "%E9%A6%99%E6%B8%AF%E5%87%B1%E6%82%85%E9%85%92%E5%BA%97-%E9%A6%99%E6%B8%AF-3",
+        "id": "香港凱悅酒店-香港-3",
+        "name": "香港凱悅酒店",
+        "address": "河內道18號",
+        "city": "香港",
+        "state": "HK",
+        "country": "HK",
+        "numReviews": 6
+    },
+    {
+        "idSent": "%E9%A6%99%E6%B8%AF%E5%90%9B%E6%82%85%E9%85%92%E5%BA%97-%E9%A6%99%E6%B8%AF-3",
+        "id": "香港君悅酒店-香港-3",
+        "name": "香港君悅酒店",
+        "address": "港灣道1號",
+        "city": "香港",
+        "state": "HK",
+        "country": "HK",
+        "numReviews": 7
+    },
+    {
+        "idSent": "%E9%A6%99%E6%B8%AF%E6%B2%99%E7%94%B0%E5%87%B1%E6%82%85%E9%85%92%E5%BA%97-%E9%A6%99%E6%B8%AF-2",
+        "id": "hyatt-regency-hong-kong-sha-tin-hong-kong",
+        "name": "Hyatt Regency Hong Kong, Sha Tin",
+        "address": "澤祥街18號",
+        "city": "Hong Kong",
+        "state": "HK",
+        "country": "HK",
+        "numReviews": 6
+    },
+    {
+        "idSent": "100th-bomb-group-cleveland",
+        "id": "100th-bomb-group-cleveland",
+        "name": "100th Bomb Group",
+        "address": "20920 Brookpark Rd",
+        "city": "Cleveland",
+        "state": "OH",
+        "zip": "44135",
+        "country": "US",
+        "numReviews": 59
+    },
+    {
+        "idSent": "12-baltimore-cafe-kansas-city",
+        "id": "12-baltimore-bar-and-cafe-kansas-city",
+        "name": "12 Baltimore",
+        "address": "106 W 12th st",
+        "city": "Kansas City",
+        "state": "MO",
+        "zip": "64105",
+        "country": "US",
+        "numReviews": 57
+    },
+    {
+        "idSent": "1789-washington",
+        "id": "1789-restaurant-washington-4",
+        "name": "1789 Restaurant",
+        "address": "1226 36th St NW",
+        "city": "Washington",
+        "state": "DC",
+        "zip": "20007",
+        "country": "US",
+        "numReviews": 467
+    },
+    {
+        "idSent": "1789-washington-2",
+        "id": "1789-restaurant-washington-4",
+        "name": "1789 Restaurant",
+        "address": "1226 36th St NW",
+        "city": "Washington",
+        "state": "DC",
+        "zip": "20007",
+        "country": "US",
+        "numReviews": 467
+    },
+    {
+        "idSent": "1886-cafe-and-bakery-austin",
+        "id": "1886-cafe-and-bakery-austin",
+        "name": "1886 Cafe & Bakery",
+        "address": "116 6th St",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "78701",
+        "country": "US",
+        "numReviews": 251
+    },
+    {
+        "idSent": "1-hotel-and-homes-south-beach-miami-beach-2",
+        "id": "1-hotel-and-homes-south-beach-miami-beach-5",
+        "name": "1 Hotel South Beach",
+        "address": "2341 Collins Ave",
+        "city": "Miami Beach",
+        "state": "FL",
+        "zip": "33139",
+        "country": "US",
+        "numReviews": 42
+    },
+    {
+        "idSent": "3-squares-restaurant-maple-grove",
+        "id": "3-squares-restaurant-maple-grove",
+        "name": "3 Squares Restaurant",
+        "address": "12690 Arbor Lakes Pkwy",
+        "city": "Maple Grove",
+        "state": "MN",
+        "zip": "55369",
+        "country": "US",
+        "numReviews": 153
+    },
+    {
+        "idSent": "5-guys-burger-and-fries-tucson",
+        "id": "five-guys-burgers-and-fries-tucson-4",
+        "name": "Five Guys Burgers and Fries",
+        "address": "5566 E Broadway Blvd",
+        "city": "Tucson",
+        "state": "AZ",
+        "zip": "85711",
+        "country": "US",
+        "numReviews": 53
+    },
+    {
+        "idSent": "5-guys-burgers-and-fries-dedham",
+        "id": "five-guys-burgers-and-fries-dedham",
+        "name": "Five Guys Burgers and Fries",
+        "address": "170 Providence Hwy",
+        "city": "Dedham",
+        "state": "MA",
+        "zip": "02026",
+        "country": "US",
+        "numReviews": 143
+    },
+    {
+        "idSent": "5-guys-burgers-and-fries-lake-charles",
+        "id": "five-guys-burgers-and-fries-lake-charles",
+        "name": "Five Guys Burgers and Fries",
+        "address": "2950 Ryan St",
+        "city": "Lake Charles",
+        "state": "LA",
+        "zip": "70601",
+        "country": "US",
+        "numReviews": 15
+    },
+    {
+        "idSent": "5-guys-burgers-and-fries-orland-park",
+        "id": "five-guys-burgers-and-fries-orland-park-2",
+        "name": "Five Guys Burgers and Fries",
+        "address": "15840 S Harlem Ave",
+        "city": "Orland Park",
+        "state": "IL",
+        "zip": "60462",
+        "country": "US",
+        "numReviews": 15
+    },
+    {
+        "idSent": "5-guys-burgers-and-fries-simi-valley",
+        "id": "five-guys-burgers-and-fries-simi-valley",
+        "name": "Five Guys Burgers and Fries",
+        "address": "2650 Tapo Canyon Rd",
+        "city": "Simi Valley",
+        "state": "CA",
+        "zip": "93063",
+        "country": "US",
+        "numReviews": 97
+    },
+    {
+        "idSent": "5-guys-burgers-and-fries-st-joseph",
+        "id": "five-guys-burgers-and-fries-st-joseph",
+        "name": "Five Guys Burgers And Fries",
+        "address": "3700 Frederick Blvd",
+        "city": "St. Joseph",
+        "state": "MO",
+        "zip": "64506",
+        "country": "US",
+        "numReviews": 4
+    },
+    {
+        "idSent": "5-guys-burgers-and-fries-warwick",
+        "id": "five-guys-burgers-and-fries-warwick-2",
+        "name": "Five Guys Burgers and Fries",
+        "address": "300 Quaker Ln",
+        "city": "Warwick",
+        "state": "RI",
+        "zip": "02886",
+        "country": "US",
+        "numReviews": 52
+    }
+]

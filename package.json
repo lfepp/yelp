@@ -1,0 +1,9 @@
+{
+  "name": "yelp-app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jquery": "^2.1.4",
+    "yelp": "^0.2.0"
+  }
+}
