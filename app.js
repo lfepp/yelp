@@ -44,6 +44,11 @@ app.get('/', function(req, res) {
             i++;
           } else {
             console.log(error);
+            json[i] = {
+              idSent: ids[i],
+              status: error.statusCode,
+              errorData: error.data
+            }
             i++;
             if (i >= ids.length) {
               clearInterval(queryInt);
