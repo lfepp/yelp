@@ -11,6 +11,9 @@ var app = express();
 var fs = require('fs');
 var ids = require('./ids.js');
 
+var json2csv = require('nice-json2csv');
+app.use(json2csv.expressDecorator);
+
 var json = [];
 var i = 0;
 var temp = -1;
@@ -60,10 +63,14 @@ app.get('/', function(req, res) {
 })
 
 app.get('/write', function(req, res) {
+  /* Depricated code used to write to JSON---------------------------------------
   fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err) {
     console.log('Successfully wrote output.json');
     res.send('Successfully wrote output.json');
-  })
+  })*/
+  console.log('Successfully wrote output.csv');
+  res.send('Successfully wrote output.csv');
+  res.csv(json, 'output.csv');
 })
 
 app.listen('9000');
