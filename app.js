@@ -62,6 +62,7 @@ app.get('/', function(req, res) {
 app.get('/write', function(req, res) {
   fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err) {
     console.log('Successfully wrote output.json');
+    res.send('Successfully wrote output.json');
   })
 })
 
