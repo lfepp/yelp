@@ -28,7 +28,6 @@ app.get('/', function(req, res) {
 
 app.post('/input', input.single('bizIDs'), function(req, res) {
   res.sendFile(__dirname + '/views/submit.html');
-  console.dir(req.file);
   path = req.file.path;
   var fileContents = fs.readFile(path, 'utf8', function(err, data) {
     if(err) {
@@ -36,6 +35,7 @@ app.post('/input', input.single('bizIDs'), function(req, res) {
     } else {
       var str = data.replace(/\s/g,"");
       ids = str.split(',');
+      console.log('Upload successful!');
       console.log(ids.length + 'IDs submitted');
     }
   })
