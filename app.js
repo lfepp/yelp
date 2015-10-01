@@ -36,7 +36,7 @@ app.post('/input', input.single('bizIDs'), function(req, res) {
       var str = data.replace(/\s/g,"");
       ids = str.split(',');
       console.log('Upload successful!');
-      console.log(ids.length + 'IDs submitted');
+      console.log(ids.length + ' IDs submitted');
     }
   })
 })
@@ -96,5 +96,6 @@ app.get('/write', function(req, res) {
 })
 
 app.listen('9000');
+console.log('Server running on localhost:9000');
 
 module.exports = app;
