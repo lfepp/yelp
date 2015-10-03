@@ -27,16 +27,16 @@ app.get('/', function(req, res) {
 })
 
 app.post('/input', input.single('bizIDs'), function(req, res) {
-  res.sendFile(__dirname + '/public/views/submit.html');
   path = req.file.path;
   var fileContents = fs.readFile(path, 'utf8', function(err, data) {
     if(err) {
       console.log(err);
+      res.sendFile(__dirname + '/public/views/submit.html');
     } else {
       var str = data.replace(/\s/g,"");
       ids = str.split(',');
-      console.log('Upload successful!');
-      console.log(ids.length + ' IDs submitted');
+      console.log('Uploaded ' + ids.length + ' IDs');
+      res.redirect('/call');
     }
   })
 })
