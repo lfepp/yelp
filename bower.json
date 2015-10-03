@@ -1,0 +1,16 @@
+{
+  "name": "yelp-tool",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lfepp/yelp",
+  "authors": [
+    "Luke Epp"
+  ],
+  "description": "",
+  "main": "app.js",
+  "moduleType": [],
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

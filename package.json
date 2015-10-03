@@ -1,5 +1,5 @@
 {
-  "name": "yelp-app",
+  "name": "yelp-tool",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.14.1",

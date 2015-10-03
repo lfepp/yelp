@@ -23,11 +23,11 @@ var temp = -1;
 var path = '';
 
 app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/public/views/index.html');
 })
 
 app.post('/input', input.single('bizIDs'), function(req, res) {
-  res.sendFile(__dirname + '/views/submit.html');
+  res.sendFile(__dirname + '/public/views/submit.html');
   path = req.file.path;
   var fileContents = fs.readFile(path, 'utf8', function(err, data) {
     if(err) {
@@ -42,7 +42,7 @@ app.post('/input', input.single('bizIDs'), function(req, res) {
 })
 
 app.get('/call', function(req, res) {
-  res.sendFile(__dirname + '/views/call.html');
+  res.sendFile(__dirname + '/public/views/call.html');
   console.log(ids.length);
   var queryInt = setInterval(function() {
     if(temp < i) {
