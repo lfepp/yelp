@@ -8,14 +8,14 @@
 
 ## Usage
 
-1. Create a list of comma separated Yelp IDs surrounded by quotes i.e.
+1. Create a list of comma separated Yelp IDs i.e.
 
 ```
-'awesome-flea-market-shepherdsville',
-'tacos-and-tattoos-miami-2',
-'bank-of-america-miami-16',
-'panther-coffee-miami',
-'uncle-bobs-self-storage-miami'
+awesome-flea-market-shepherdsville,
+tacos-and-tattoos-miami-2,
+bank-of-america-miami-16,
+panther-coffee-miami,
+uncle-bobs-self-storage-miami
 ```
 
 2. Start the tool `node app.js`

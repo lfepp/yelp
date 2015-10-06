@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>Yelp Tool</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+<body>
+  <style>
+    form {
+      margin-bottom: 20px;
+    }
+  </style>
+  <div class="container">
+    <h1 class="page-header text-center">Yelp Tool</h1>
+    <p class="jumbotron text-center">You can check the progress of your calls within your console. When all IDs have processed, click the Write button below to write your file to CSV. If you would like to start over with new IDs, click the Start Over button to begin from the first page.</p>
+    <form action="write" method="get">
+      <button type="submit" class="btn btn-default">Write</button>
+    </form>
+    <form action="/" method="get">
+      <button type="submit" class="btn btn-default">Start Over</button>
+    </form>
+  </div>
+</body>
+</html>
