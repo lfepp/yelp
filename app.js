@@ -78,6 +78,7 @@ app.get('/call', function(req, res) {
           i++;
           if (i >= ids.length) {
             clearInterval(queryInt);
+            console.log('All IDs have processed!');
           }
         }
       })
