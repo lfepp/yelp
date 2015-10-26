@@ -96,7 +96,7 @@ app.get('/write', function(req, res) {
   res.csv(json, 'output.csv');
 })
 
-app.listen('9000');
+app.listen(process.env.PORT || 9000);
 console.log('Server running on localhost:9000');
 
 module.exports = app;
