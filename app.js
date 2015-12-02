@@ -49,7 +49,6 @@ app.post('/input', input.single('bizIDs'), function(req, res) {
 })
 
 app.get('/call', function(req, res) {
-  // res.sendFile(__dirname + '/public/views/call.html');
   res.setTimeout(0);
   console.log(ids.length);
   var queryInt = setInterval(function() {
