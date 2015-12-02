@@ -1,20 +1,27 @@
 'use strict';
 
+var apiKey = require('./app/config.js');
+
 var yelp = require('yelp').createClient({
-  consumer_key: 'q9HCxwON4DQTMQZlfwFCNw',
-  consumer_secret: 'f9tyRm5bnGcW0_rw-6c1TG2Gha0',
-  token: 'le6gyKArYY-nV7BR0bsqEYJge3sqsTls',
-  token_secret: 'Sf-GECfPAw65IHJbq_9TLwoDus8'
+  consumer_key: apiKey.consumerKey,
+  consumer_secret: apiKey.consumerSecret,
+  token: apiKey.token,
+  token_secret: apiKey.tokenSecret
 });
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var flash = require('connect-flash');
 
 var multer = require('multer');
 var input = multer({ dest: 'input/'});
 
 var json2csv = require('nice-json2csv');
 app.use(json2csv.expressDecorator);
+
+app.use(express.session());
+app.use(cookieParser());
+app.use(flash());
 
 var json = [];
 var ids = [];
@@ -42,7 +49,8 @@ app.post('/input', input.single('bizIDs'), function(req, res) {
 })
 
 app.get('/call', function(req, res) {
-  res.sendFile(__dirname + '/public/views/call.html');
+  // res.sendFile(__dirname + '/public/views/call.html');
+  res.setTimeout(0);
   console.log(ids.length);
   var queryInt = setInterval(function() {
     if(temp < i) {
@@ -79,6 +87,7 @@ app.get('/call', function(req, res) {
           if (i >= ids.length) {
             clearInterval(queryInt);
             console.log('All IDs have processed!');
+            res.redirect('/write');
           }
         }
       })
