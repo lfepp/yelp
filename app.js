@@ -11,17 +11,12 @@ var yelp = require('yelp').createClient({
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var flash = require('connect-flash');
 
 var multer = require('multer');
 var input = multer({ dest: 'input/'});
 
 var json2csv = require('nice-json2csv');
 app.use(json2csv.expressDecorator);
-
-app.use(express.session());
-app.use(cookieParser());
-app.use(flash());
 
 var json = [];
 var ids = [];
