@@ -25,6 +25,11 @@ var temp = -1;
 var path = '';
 
 app.get('/', function(req, res) {
+  json = [];
+  ids = [];
+  i = 0;
+  temp = -1;
+  path = '';
   res.sendFile(__dirname + '/public/views/index.html');
 })
 
