@@ -1,12 +1,13 @@
 {
   "name": "yelp-tool",
   "main": "app.js",
+  "version": "1.1.0",
   "dependencies": {
-    "body-parser": "^1.14.1",
-    "express": "^4.13.3",
-    "jquery": "^2.1.4",
-    "multer": "^1.0.5",
-    "nice-json2csv": "^0.2.0",
-    "yelp": "^0.2.0"
+    "body-parser": "1.14.1",
+    "express": "4.13.3",
+    "jquery": "2.1.4",
+    "multer": "1.0.5",
+    "nice-json2csv": "0.2.0",
+    "yelp": "0.2.0"
   }
 }
