@@ -28,7 +28,6 @@ app.get('/', function(req, res) {
   json = [];
   ids = [];
   i = 0;
-  temp = -1;
   path = '';
   res.sendFile(__dirname + '/public/views/index.html');
 })
@@ -39,7 +38,8 @@ app.post('/input', input.single('bizIDs'), function(req, res) {
     if(err) {
       console.log(err);
       res.sendFile(__dirname + '/public/views/submit.html');
-    } else {
+    }
+    else {
       var str = data.replace(/\s/g,"");
       ids = str.split(',');
       console.log('Uploaded ' + ids.length + ' IDs');
@@ -49,49 +49,47 @@ app.post('/input', input.single('bizIDs'), function(req, res) {
 })
 
 app.get('/call', function(req, res) {
-  res.setTimeout(0);
-  console.log(ids.length);
-  var queryInt = setInterval(function() {
-    if(temp < i) {
-      temp++;
-      console.log('Running for index: ' + i);
-      yelp.business(ids[i], function(error, data) {
-        if(!error) {
-          json[i] = {
-            idSent: ids[i],
-            id: data.id,
-            url: data.url,
-            isClaimed: data.is_claimed,
-            isClosed: data.is_closed,
-            name: data.name,
-            phone: data.display_phone,
-            address: data.location.address[0],
-            city: data.location.city,
-            state: data.location.state_code,
-            zip: data.location.postal_code,
-            country: data.location.country_code,
-            numReviews: data.review_count
-          };
-          console.log('Successfully added:');
-          console.dir(json[i]);
-          i++;
-        } else {
-          console.log(error);
-          json[i] = {
-            idSent: ids[i],
-            status: error.statusCode,
-            errorData: error.data
-          }
-          i++;
-          if (i >= ids.length) {
-            clearInterval(queryInt);
-            console.log('All IDs have processed!');
-            res.redirect('/write');
-          }
+  console.log('Running callYelp() for ' + ids.length + ' IDs');
+  callYelp(json, ids, i);
+  function callYelp(json, ids, i) {
+    yelp.business(ids[i], function(error, data) {
+      if(!error) {
+        json[i] = {
+          idSent: ids[i],
+          id: data.id,
+          url: data.url,
+          isClaimed: data.is_claimed,
+          isClosed: data.is_closed,
+          name: data.name,
+          phone: data.display_phone,
+          address: data.location.address[0],
+          city: data.location.city,
+          state: data.location.state_code,
+          zip: data.location.postal_code,
+          country: data.location.country_code,
+          numReviews: data.review_count
+        };
+        console.log('Successfully added:');
+        console.dir(json[i]);
+      }
+      else {
+        console.log(error);
+        json[i] = {
+          idSent: ids[i],
+          status: error.statusCode,
+          errorData: error.data
         }
-      })
-    }
-  }, 0)
+      }
+      i++;
+      if (i >= ids.length) {
+        console.log('All IDs have processed!');
+        res.redirect('/write');
+      }
+      else {
+        callYelp(json, ids, i);
+      }
+    })
+  }
 })
 
 app.get('/write', function(req, res) {
