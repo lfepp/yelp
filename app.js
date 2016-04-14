@@ -2,7 +2,8 @@
 
 var apiKey = require('./app/config.js');
 
-var yelp = require('yelp').createClient({
+var Yelp = require('yelp');
+var yelp = new Yelp({
   consumer_key: apiKey.consumerKey,
   consumer_secret: apiKey.consumerSecret,
   token: apiKey.token,
@@ -21,7 +22,6 @@ app.use(json2csv.expressDecorator);
 var json = [];
 var ids = [];
 var i = 0;
-var temp = -1;
 var path = '';
 
 app.get('/', function(req, res) {
